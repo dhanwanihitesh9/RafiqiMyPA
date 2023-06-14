@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.form-container {
+  flex-grow: 2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+.table-container {
+  flex-grow: 8;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}

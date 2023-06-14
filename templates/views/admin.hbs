@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Document Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/page.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Document Management</h1>
+        <form>
+          <label for="docName">Document Name:</label>
+          <input type="text" id="docName" name="docName" required />
+          <br /><br />
+          <label for="docType">Document Type:</label>
+          <select id="docType" name="docType" required>
+            <option value="">Select Type</option>
+            <option value="policy">Policy Documents</option>
+            <option value="dataset">Data Set</option>
+            <option value="information">Information Document</option>
+          </select>
+          <br /><br />
+          <label for="docDesc">Document Description:</label>
+          <textarea id="docDesc" name="docDesc" required></textarea>
+          <br /><br />
+          <label for="docFile">Upload Document:</label>
+          <input type="file" id="docFile" name="docFile" required />
+          <br /><br />
+          <input id="file-upload" type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Document Name</th>
+              <th>Document Type</th>
+              <th>Document Description</th>
+              <th>Document Size</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- List of documents -->
+
+            {{#each document}}
+             {{>documentList}}.
+            {{/each}}
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/page.js"></script>
+  </body>
+</html>
